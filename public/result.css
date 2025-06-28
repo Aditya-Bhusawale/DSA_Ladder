@@ -1,0 +1,17 @@
+ .btn-glow:hover {
+      background-color: #7eef74;
+      box-shadow: 0 0 15px #42eb5b;
+    }
+
+    .btn-glow {
+      background-color: #46ce51;
+      border:2px;
+      color: #000;
+      font-weight: bold;
+      width: 10% !important;
+      margin-left: 8rem;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #58e866;
+      transition: 0.3s;
+    }

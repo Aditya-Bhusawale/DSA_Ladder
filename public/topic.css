@@ -1,0 +1,36 @@
+body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      background-color: #2e2e2e;
+      border: none;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    }
+    .form-select, .btn {
+      border-radius: 8px;
+    }
+    
+    .card h2,label{
+        color: white;
+    }
+
+    .btn-glow:hover {
+      background-color: #00c6d6;
+      box-shadow: 0 0 15px #00e0ff;
+    }
+
+    .btn-glow {
+      background-color: #00f0ff;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: 0.3s;
+    }
