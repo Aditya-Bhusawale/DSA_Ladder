@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Array Problems</title>
+  <link rel="stylesheet" href="/css/questions_list.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body style="background-color: #1e1e1e; color: white;">
+
+    <%- include("./includes/navbar.ejs")%>
+
+  <div class="container py-5">
+    <h2 class="text-center text-info mb-4"><%= question[0].topic %> Problems</h2>
+
+    <div class="row g-4">
+      <% question.forEach(title => { %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <a href="/topic/<%= title._id %>" class="text-decoration-none">
+            <div class="card problem-card h-100 text-center">
+              <div class="card-body d-flex align-items-center justify-content-center">
+                <p class="card-text text-light m-0";" style="color:black;"><%= title.title %></p>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+</body>
+</html>

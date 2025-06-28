@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Case Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/result.css">
+</head>
+
+      <%- include("./includes/navbar.ejs")%>
+
+<body style="background-color: #f5f5f5; color: #000;">
+
+    <% const passedCount = testResults.filter(t => t.passed).length; %>
+    <% if (passedCount === question.testcases.length) { %>
+    <h2 class="text-success text-center mt-4">All Testcases Passed!</h2>
+
+    <form method="POST" action="/submission/<%=question._id%>">
+    <textarea name="code" style="display:none;"><%= code %></textarea>
+    <button  class="btn-glow ">Submit Code</button>
+    </form>
+    <% } else { %>
+    <h2 class="text-danger text-center mt-4">
+         <%= passedCount %> out of <%= question.testcases.length %> testcases passed!
+    </h2>
+    <% } %>
+
+
+    <div class="container mt-4">
+        <h2 class="mb-4">Test Case Results for <%= question.title %></h2>
+
+        <% testResults.forEach((test, index) => { %>
+            <div class="border p-3 mb-4 rounded" style="background-color: #fff;">
+                <h5>Test Case <%= index + 1 %></h5>
+                
+                <strong>Input:</strong>
+                <pre><%= test.input %></pre>
+
+                <strong>Expected Output:</strong>
+                <pre><%= test.expected %></pre>
+
+                <strong>Your Output:</strong>
+                <pre><%= test.user_output %></pre>
+
+                <strong>Status:</strong>
+                <% if (test.passed) { %>
+                    <span style="color: green;">Testcase Passed</span>
+                <% } else { %>
+                    <span style="color: red;">Testcase Failed</span>
+                <% } %>
+            </div>
+        <% }) %>
+
+        
+
+
+
+    </div>
+</body>
+</html>

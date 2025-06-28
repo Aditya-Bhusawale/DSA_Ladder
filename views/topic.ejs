@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Topic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/topic.css">
+</head>
+<body>
+
+  <%- include("./includes/navbar.ejs")%>
+
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card w-50 text-center">
+      <h2 class="mb-4">🚀 Select a DSA Topic</h2>
+
+      <form method="POST" action="/topic">
+        <div class="mb-4">
+          <label for="tag" class="form-label">Choose a topic:</label>
+          <select name="topic" id="tag" class="form-select">
+            <option value="Array">📊 Array</option>
+            <option value="String">🔤 String</option>
+            <option value="Tree">🌳 Tree</option>
+            <option value="Graph">🧠 Graph</option>
+            <option value="LinkedList">🔗 Linked List</option>
+            <option value="Stack">📚 Stack</option>
+            <option value="Queue">📦 Queue</option>
+            <option value="Heap">🗂 Heap</option>
+            <option value="Hashing">🔐 Hashing</option>
+            <option value="SlidingWindow">📏 Sliding Window</option>
+            <option value="BinarySearch">🔎 Binary Search</option>
+            <option value="Greedy">💰 Greedy</option>
+            <option value="Backtracking">🧪 Backtracking</option>
+            <option value="Recursion">🔁 Recursion</option>
+            <option value="DynamicProgramming">🧩 Dynamic Programming</option>
+            <option value="BitManipulation">🧮 Bit Manipulation</option>
+            <option value="TwoPointers">👣 Two Pointers</option>
+            <option value="Math">➕ Math</option>
+            <option value="Trie">🌐 Trie</option>
+            <option value="SegmentTree">🌲 Segment Tree</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-glow mt-3">Start Solving</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
