@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Submissions - DSA Ladder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/submission.css">
+</head>
+<body style="background-color: #0f0f0f; color: white;">
+
+    <%- include("../includes/navbar.ejs")%>
+
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 40vh;">
+    <div class="submission-box p-4 rounded shadow">
+      <h2 class="text-center mb-4">📄 My Submissions</h2>
+
+      <% if (questions.length === 0) { %>
+        <p class="text-center text-muted">No submissions yet.</p>
+      <% } else { %>
+        <ul class="list-group list-group-flush">
+          <% for (let title of questions) { %>
+            <li class="list-group-item submission-item ">
+              <%= title %>
+            </li>
+          <% } %>
+        </ul>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
