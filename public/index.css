@@ -1,0 +1,40 @@
+body {
+      background-color: white;
+      color: black;
+      font-family: 'Segoe UI', sans-serif;
+}
+
+p.description{
+    font-size: 1rem !important;
+}
+    
+.testcase-card {
+      background-color: #2b2b2b;
+      padding: 20px;
+      width: 50rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+      margin-bottom: 20px;
+}
+.left p{
+    width: 50rem;
+}
+.title {
+    width: 50rem;
+}
+pre {
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-radius: 5px;
+      color: #0ef;
+      font-size: 14px;
+}
+
+textarea {
+      background-color: #fff;
+      font-family: monospace;
+}
+
+.btn-primary {
+      min-width: 120px;
+}
